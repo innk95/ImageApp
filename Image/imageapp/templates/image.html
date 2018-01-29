@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Image Page</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+<a href="../">Вернуться к списку </a>
+<br>
+<br>
+<br>
+<form>
+    width
+    <input type="text" id="width">
+    heigth
+    <input type="text" id="height">
+    size
+    <input type="text" id="size">
+    <input type="button" id="btn" value="Изменить">
+
+</form>
+{% for image in image_list %}
+    {% if image.id == image_take %}
+    <img src="../media/images/{{image.url}}" id="image">
+    {% endif %}
+{% endfor %}
+
+
+{% load static %}
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>

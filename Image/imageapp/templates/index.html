@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Index Page</title>
+    <meta charset="utf-8">
+
+<body>
+<a href="upload/">Загрузить изображение</a>
+<br>
+<ul>
+{% for image in images %}
+    <li><a href="{{image.id}}/">{{ image.url }}</a></li>
+{% endfor %}
+</ul>
+
+
+
+</body>
+</html>
